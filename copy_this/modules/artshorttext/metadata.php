@@ -1,0 +1,60 @@
+<?php
+/**
+ * This OXID module will ask for the Delivery Date during Checkout Process.
+ * The Delivery Date will be stored in the Session and later stored in the DB:oxorder
+ * The Delivery Date will be shown in the Order - Confirmation Email and on the Thank-You Page 
+ *
+ * The Delivery Date, which can be selected, is bound to some rules. 
+ * 1.) Today if not later than "DEADLINE"
+ * 2.) TOMORROW if today is not friday. 
+ *
+ * DEADLINE is a setting within the Modul. 
+ *
+ * TODO: 
+ * 1.) There needs to be a ADMIN Page, which displayes the Delivery Date within the Order
+ * 2.) The Order History needs to be modified. 
+ * 3.) If no Delivery Date is possible, it is still possible to finish the order. there needs to be a ERROR Message. 
+ * 
+ * NOTICE OF LICENSE
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3 of the License
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see http://www.gnu.org/licenses/
+ *
+ * @copyright   Copyright (c) 2013 Peter Wiedeking
+ * @author      Peter Wiedeking
+ * @license     http://opensource.org/licenses/GPL-3.0  GNU General Public License, version 3 (GPL-3.0)
+ */
+
+/**
+ * Metadata version
+ */
+$sMetadataVersion = '1.1';
+
+$aModule = array(
+    'id'          => 'artshorttext',
+    'title'       => 'Anzeige Artikel Kurztext in Galerie',
+    'description' => array(
+        'de'      => 'Dieses Modul ermöglicht die Anzeige des Artikel Kurttextes in der Galerie Ansicht',
+        'en'      => 'Show the article shorttext in gallery',
+    ),
+	'lang'        => 'de',
+	'thumbnail'	  => 'artshort_text.jpg',
+    'email'       => 'walter.goeth@gmx.at',
+	'version'     => '1.0',
+    'author'      => 'Walter Göth',
+    'extend'      => array(),
+	'blocks'      => array(
+        array('template' => 'widget/product/listitem_grid.tpl', 'block' => 'widget_product_listitem_infogrid_titlebox', 'file' => 'widget/product/listitem_grid'),
+),
+	'settings' => array(
+    )
+);
