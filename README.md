@@ -7,7 +7,7 @@ Was ich alles in diesem Modul mache:
 
     Erweiterung des widget/product/listitem_grid.tpl
     
-NOTICE OF LICENSE
+# NOTICE OF LICENSE
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ NOTICE OF LICENSE
     @author Peter Wiedeking
     @license http://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
 
-Installation
+# Installation
 
     Copy "copy_this" to OXID Directory
 
